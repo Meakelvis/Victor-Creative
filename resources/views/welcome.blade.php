@@ -18,261 +18,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        header,
-        section {
-            overflow-x: hidden;
-        }
-
-        :root {
-            --dark-blue: #09242f;
-            --light-red: #ff4f24;
-            --white-bg: #fffdfe;
-            --grey-bg: #f5f5f5;
-        }
-
-        header a {
-            color: var(--dark-blue);
-        }
-
-        header {
-            height: 100%;
-            background-image: url("img/header.png");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        header .navbar-brand img {
-            height: 2em;
-            padding-left: 2em;
-        }
-
-        header .nav-item:last-child {
-            padding-right: 12em;
-        }
-
-        header .nav-item {
-            padding: 1em;
-        }
-
-        header .nav-link {
-            font-weight: bold;
-        }
-
-        header .nav-link:hover {
-            color: var(--light-red);
-        }
-
-        header .row .col-md-6 {
-            padding: 22vmin 1vmin;
-            padding-bottom: 35vmin;
-            text-align: left;
-        }
-
-        header .row .col-md-6 h1 {
-            color: var(--dark-blue);
-            padding-bottom: 0.2em;
-        }
-
-        header .row .col-md-6 h6 {
-            color: var(--dark-blue);
-            padding-bottom: 1em;
-            font-weight: lighter;
-            letter-spacing: 2px;
-        }
-
-        .primary-btn {
-            background-color: var(--white-bg);
-            color: var(--dark-blue);
-            border-radius: 20px;
-            border-color: var(--dark-blue);
-            font-weight: bold;
-        }
-
-        .primary-btn:hover {
-            background-color: var(--dark-blue);
-            color: var(--white-bg);
-        }
-
-        header .row .col-md-6 img {
-            height: 80vmin;
-            margin-top: -15vmin;
-        }
-
-        /*****section-1******/
-        .section-1 {
-            padding: 10vmin 10vmin;
-            background-color: var(--white-bg);
-        }
-
-        .section-1 .row .col-md-6 h2 {
-            color: var(--dark-blue);
-        }
-
-        .section-1 .row .col-md-6 h6 {
-            color: var(--dark-blue);
-            font-weight: lighter;
-            text-align: left;
-        }
-
-        .section-1 .row .col-md-6 p {
-            padding-top: 3em;
-            letter-spacing: 2px;
-            text-align: justify;
-        }
-
-        .section-1 .row .col-md-6 .logos {
-            padding: 2vmin 5vmin;
-        }
-
-        /******section-2******/
-        .section-2 {
-            padding: 10vmin 10vmin;
-            background-color: var(--grey-bg);
-        }
-
-        .section-2 h2 {
-            color: var(--dark-blue);
-            padding-bottom: 5vmin;
-        }
-
-        .title::after {
-            content: '';
-            background: var(--light-red);
-            height: 3px;
-            width: 30vmin;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            transform: translateY(5px);
-        }
-
-        .section-2 .row .col-md-4 img {
-            height: 375px;
-            width: 374px;
-            size: cover;
-            position: center;
-        }
-
-        /******section-3*******/
-        .section-3 {
-            padding: 10vmin 10vmin;
-            background-color: var(--white-bg);
-        }
-
-        .section-3 h2 {
-            color: var(--dark-blue);
-            padding-bottom: 5vmin;
-        }
-
-        .section-3 h2::after {
-            content: '';
-            background: var(--light-red);
-            height: 3px;
-            width: 45vmin;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            transform: translateY(5px);
-        }
-
-        .section-3 .row .col-md-4 img {
-            height: 200px;
-            width: 200px;
-        }
-
-        .section-3 .row .col-md-4 .comment {
-            padding-top: 1em;
-        }
-
-        .section-3 .row .col-md-4 .post {
-            margin-top: -1em;
-        }
-
-        /******section-4*********/
-        .section-4 {
-            padding: 10vmin 10vmin;
-            background-color: var(--grey-bg);
-        }
-
-        .section-4 h2::after {
-            content: '';
-            background: var(--light-red);
-            height: 3px;
-            width: 25vmin;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            transform: translateY(5px);
-        }
-
-        .section-4 .rect {
-            padding: 5vmin 5vmin;
-            background-color: #ffffff;
-            width: 43vmin;
-            height: 25vmin;
-            position: relative;
-            margin: 2rem;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-
-        .section-4 .rect h6 {
-            padding-top: 15px;
-        }
-
-        .section-4 .rect p {
-            letter-spacing: 1px;
-            padding-top: 10px;
-        }
-
-        .section-4 .rect .row img {
-            margin: 2px;
-            padding-top: 5px;
-        }
-
-        .section-4 .contact-rect {
-            background-color: white;
-            padding: 10vmin;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            margin-top: 2vmin;
-        }
-
-        .section-4 .contact-rect .form-row .form-group input {
-            border-radius: 20px;
-            background-color: #f5f5f5;
-            border: none;
-            margin-bottom: 5px;
-        }
-
-        .section-4 .contact-rect .form-group textarea {
-            border-radius: 20px;
-            background-color: #f5f5f5;
-            border: none;
-            margin-bottom: 20px;
-        }
-
-        .section-4 .contact-rect button {
-            margin-top: 5px;
-        }
-
-        footer {
-            color: var(--white-bg);
-            background-color: var(--dark-blue);
-            font-weight: lighter;
-            height: 10vmin;
-        }
-
-        footer p {
-            padding: 25px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -282,7 +30,7 @@
                 <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-align-right"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
@@ -413,18 +161,24 @@
                         <h6>EMAIL</h6>
                         <p>kirundacharles33@gmail.com</p>
                     </div>
-                    <div class="rect text">
+                    <div class="rect text-center">
                         <img src="img/handshake.png" class="contact-logos">
                         <h6>SOCIAL MEDIA</h6>
                         <div class="row">
                             <div class="col-3">
-                                <img src="img/facebook.png" alt="">
+                                <a href="https://www.facebook.com/143victor/">
+                                    <img src="img/facebook.png" alt="">
+                                </a>
                             </div>
                             <div class="col-3">
-                                <img src="img/twitter.png" alt="">
+                                <a href="https://twitter.com/VictorCreative1">
+                                    <img src="img/twitter.png" alt="">
+                                </a>
                             </div>
                             <div class="col-3">
-                                <img src="img/instagram.png" alt="">
+                                <a href="https://www.instagram.com/victor_creative/">
+                                    <img src="img/instagram.png" alt="">
+                                </a>
                             </div>
                             <div class="col-3">
                                 <img src="img/snapchat.png" alt="">
